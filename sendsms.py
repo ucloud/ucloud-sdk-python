@@ -1,5 +1,7 @@
-#-*- encoding: utf-8 -*-
-from sdk import UcloudApiClient 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+from sdk import UcloudApiClient
 from config import *
 import sys
 import json

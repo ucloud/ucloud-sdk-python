@@ -17,6 +17,7 @@ def get_ulb_list(region):
 
 
 if __name__ == '__main__':
+    # region description can be found in get_metric.py file
     usage = '%s Region\n' % (sys.argv[0])
     argc = len(sys.argv)
     if argc != 2:

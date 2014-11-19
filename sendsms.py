@@ -11,6 +11,9 @@ import json
 
 if __name__=='__main__':
     arg_length = len(sys.argv)
+
+    params = {}
+    params['Action.1'] = "GetBalance"
     ApiClient = UcloudApiClient(base_url, public_key, private_key)
-    response = ApiClient.get("/", Action="GetBalance");
+    response = ApiClient.get("/", params);
     print response;

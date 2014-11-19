@@ -11,8 +11,11 @@ def get_ulb_list(region):
     api_client = UcloudApiClient(config.base_url, config.public_key,
                                  config.private_key)
 
-    response = api_client.get("/", Action="DescribeULB",
-                              Region=region)
+    params = {};
+    params['Action'] = "DescribeULB"
+    params['Region'] = region
+
+    response = api_client.get("/", params)
     pprint(response)
 
 

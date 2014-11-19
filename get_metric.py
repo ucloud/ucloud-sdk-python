@@ -48,12 +48,14 @@ def get_metric(region, resource_type, resource_id, metric_name,
     api_client = UcloudApiClient(config.base_url, config.public_key,
                                  config.private_key)
 
-    response = api_client.get("/", Action="GetMetric",
-                              Region=region,
-                              ResourceType=resource_type,
-                              ResourceID=resource_id,
-                              MetricName=metric_name,
-                              TimeRange=timerange)
+    params = {};
+    params['Region'] = region
+    params['Action'] = 'GetMetric' 
+    params['ResourceType'] = resource_type 
+    params['ResourceID'] = resource_id 
+    params['MetricName'] = metric_name
+    params['TimeRange'] = timerange 
+    response = api_client.get("/", params)
     pprint(response)
 
 

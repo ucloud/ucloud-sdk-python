@@ -27,6 +27,7 @@ def _verfy_ac(private_key, params):
 
 class UConnection(object):
     def __init__(self, base_url):
+        self.base_url = base_url
         o = urlparse.urlsplit(base_url)
         if o.scheme == 'https':
             self.conn = httplib.HTTPSConnection(o.netloc);
@@ -39,6 +40,7 @@ class UConnection(object):
 
     def get(self, resouse, params):
         resouse += "?" + urllib.urlencode(params)
+        print("%s%s" % (self.base_url, resouse))
         self.conn.request("GET", resouse);
         response = json.loads(self.conn.getresponse().read());
         return response;
@@ -51,10 +53,6 @@ class UcloudApiClient(object):
         self.private_key = private_key;
         self.conn = UConnection(base_url);
 
-    # def get(self, uri, **params):
-    #     _params =  dict(self.g_params, **params);
-    #     _params["Signature"] = _verfy_ac(self.private_key, _params);
-    #     return self.conn.get(uri, _params);
 
     def get(self, uri, params):
         print params

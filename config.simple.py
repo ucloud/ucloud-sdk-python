@@ -3,4 +3,4 @@
 public_key  = ""
 private_key = ""
 
-base_url    = "http://api.spark.ucloud.cn"
+base_url    = "https://api.ucloud.cn"

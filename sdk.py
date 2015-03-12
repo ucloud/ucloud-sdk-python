@@ -55,7 +55,7 @@ class UcloudApiClient(object):
 
 
     def get(self, uri, params):
-        print params
+         #print params
         _params =  dict(self.g_params, **params);
         _params["Signature"] = _verfy_ac(self.private_key, _params);
         return self.conn.get(uri, _params);

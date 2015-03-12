@@ -12,6 +12,10 @@ import json
 if __name__=='__main__':
     arg_length = len(sys.argv)
     ApiClient = UcloudApiClient(base_url, public_key, private_key)
-    Parameters={"Action":"GetBalance"}
-    response = ApiClient.get("/", Parameters );
-    print json.dumps(response, sort_keys=True, indent=4, separators=(',', ': '))
+    Parameters={
+                "Action":"DeleteSecurityGroup",
+                "Region":"cn-north-03",
+                "GroupId":"6584"
+                }
+    response = ApiClient.get("/", Parameters);
+    print response;

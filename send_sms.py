@@ -11,7 +11,7 @@ import json
 if __name__=='__main__':
     arg_length = len(sys.argv)
     if arg_length == 1 or arg_length == 2 :
-        print "./sendsms.py 1377777777777|137888888888 测试短信"
+        print './sendsms.py "1377777777777|137888888888" "测试短信"'
         sys.exit()
     ApiClient = UcloudApiClient(base_url, public_key, private_key)
     phones = sys.argv[1].split('|')

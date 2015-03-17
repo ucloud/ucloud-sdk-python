@@ -10,11 +10,16 @@ import json
 
 if __name__=='__main__':
     arg_length = len(sys.argv)
+    if arg_length != 3:
+        print 'arg number error'
+        sys.exit()
     ApiClient = UcloudApiClient(base_url, public_key, private_key)
+    phones = sys.argv[1].split(',')
     Parameters={
             "Action":"SendSms",
-            "Phone.0":"18088888888",
-            "Content":"测试短信"
+            "Content":sys.argv[2]
             }
+    for i in range(len(phones)):
+        Parameters['Phone.'+str(i)] = phones[i]
     response = ApiClient.get("/", Parameters );
     print json.dumps(response, sort_keys=True, indent=4, separators=(',', ': '))

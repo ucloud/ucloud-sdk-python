@@ -15,6 +15,6 @@
 
 send_sms.py 使用示范
 
-python send_sms.py "13777777777,137xxxxxxxx,138xxxxxxxx" "测试短信"
+python send_sms.py "13777777777|137xxxxxxxx|138xxxxxxxx" "测试短信"
 
 #监控脚本示范建议加入crontab 1分钟一次

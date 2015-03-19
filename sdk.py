@@ -20,7 +20,7 @@ def _verfy_ac(private_key, params):
         params_data = params_data + str(key) + str(value)
 
     params_data = params_data+private_key
-    print params_data
+    
     '''use sha1 to encode keys'''
     hash_new = hashlib.sha1()
     hash_new.update(params_data)

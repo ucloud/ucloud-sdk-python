@@ -6,6 +6,7 @@
 #配置公私钥 公私钥请到用户中心获取
 #   public_key  = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 #   private_key = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+#   project_id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" #项目ID 请从dashbord 获取
 #
 #
 #配置api地址'''

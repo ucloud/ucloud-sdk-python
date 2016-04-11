@@ -19,6 +19,12 @@ if __name__=='__main__':
             "Action":"SendSms",
             "Content":sys.argv[2]
             }
+    if sys.platform == 'win32' : 
+        Parameters={
+                "Action":"SendSms",
+                "Content": "windows 命令行测试不支持传中文请谅解"
+                }
+
     for i in range(len(phones)):
         Parameters['Phone.'+str(i)] = phones[i]
     response = ApiClient.get("/", Parameters );

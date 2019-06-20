@@ -1,7 +1,8 @@
 **Note**
 
-UCloud 已经上线新版 [Python2 OpenAPI SDK](https://github.com/ucloud/ucloud-sdk-python2)
-[Python3 OpenAPI SDK](https://github.com/ucloud/ucloud-sdk-python3)
+UCloud 已经上线新版     
+[Python2 OpenAPI SDK](https://github.com/ucloud/ucloud-sdk-python2)    
+[Python3 OpenAPI SDK](https://github.com/ucloud/ucloud-sdk-python3)    
 
 - 本仓库废弃
 - 原来的 SDK 可以继续使用，但不会继续更新。
